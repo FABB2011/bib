@@ -14,13 +14,13 @@ const michelinParser = function(url) {
   return rp(url)
     .then(function(html) {
       name = $('.restaurant-details__heading--title', html).text();
-      tel = $('span.flex-fill', html).text(); 
+      //tel = $('span.flex-fill', html).text(); 
       name = name.slice(0, name.length/2);
       name = name.toUpperCase();
-      tel = tel.slice(4, 17);
-      tel = '0' + tel
+      //tel = tel.slice(4, 17);
+      //tel = '0' + tel
       name = {name:name}
-      tel = {tel:tel}
+      //tel = {tel:tel}
       console.log(name)
       //console.log(tel)
       storeData(name, 'michelin.json')
